@@ -1,0 +1,23 @@
+@monkeyId = 15
+
+
+GET https://localhost:7164/api/monkey
+
+###
+
+GET https://localhost:7164/api/monkey/{{monkeyId}}
+
+###
+
+POST https://localhost:7164/api/monkey
+Content-Type application/json
+
+{
+  "name": "James from .http",
+  "details": "The mandrill is a primate of the Old World monkey family, closely related to the baboons and even more closely to the drill. It is found in southern Cameroon, Gabon, Equatorial Guinea, and Congo.",
+  "image": "https://raw.githubusercontent.com/jamesmontemagno/app-monkeys/master/mandrill.jpg",
+  "location": "Southern Cameroon, Gabon, and Congo",
+  "population": 17000,
+  "latitude": 7.369722,
+  "longitude": 12.354722
+}
