@@ -4,7 +4,7 @@ using MonkeyApp1.Data;
 using MonkeyApp1;
 var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddDbContext<MonkeyApp1Context>(options =>
-    options.UseSqlServer(builder.Configuration.GetConnectionString("azuredatabase") ?? throw new InvalidOperationException("Connection string 'azuredatabase' not found.")));
+    options.UseSqlServer(builder.Configuration.GetConnectionString("MonkeyApp1Context") ?? throw new InvalidOperationException("Connection string 'azuredatabase' not found.")));
 
 // Add services to the container.
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
@@ -19,6 +19,12 @@ var app = builder.Build();
     app.UseSwagger();
     app.UseSwaggerUI();
 }
+
+if (app.Environment.IsDevelopment())
+{
+    app.UseSwagger();
+    app.UseSwaggerUI();
+};
 
 app.UseHttpsRedirection();
 
