@@ -3,11 +3,12 @@ using Microsoft.AspNetCore.Http.HttpResults;
 using Microsoft.AspNetCore.OpenApi;
 using MonkeyApp1.Data;
 using MonkeyApp1.Models;
-namespace MonkeyApp1;
+
+namespace MonkeyApp1.Endpoints;
 
 public static class MonkeyEndpoints
 {
-    public static void MapMonkeyEndpoints (this IEndpointRouteBuilder routes)
+    public static void MapMonkeyEndpoints(this IEndpointRouteBuilder routes)
     {
         var group = routes.MapGroup("/api/Monkey").WithTags(nameof(Monkey));
 
@@ -53,7 +54,7 @@ public static class MonkeyEndpoints
         {
             db.Monkey.Add(monkey);
             await db.SaveChangesAsync();
-            return TypedResults.Created($"/api/Monkey/{monkey.Id}",monkey);
+            return TypedResults.Created($"/api/Monkey/{monkey.Id}", monkey);
         })
         .WithName("CreateMonkey")
         .WithOpenApi();

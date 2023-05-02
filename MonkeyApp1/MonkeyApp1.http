@@ -1,0 +1,26 @@
+﻿@MonkeyApp1_HostAddress = https://localhost:7164
+
+Get {{MonkeyApp1_HostAddress}}/api/Monkey/
+
+###
+
+Get {{MonkeyApp1_HostAddress}}/api/Monkey/2
+
+###
+
+GET {{MonkeyApp1_HostAddress}}/api/continents
+
+###
+
+POST {{MonkeyApp1_HostAddress}}/api/continents
+Content-Type: application/json
+
+{
+  "name":"North America"
+}
+
+###
+
+DELETE {{MonkeyApp1_HostAddress}}/api/continents/2
+
+###

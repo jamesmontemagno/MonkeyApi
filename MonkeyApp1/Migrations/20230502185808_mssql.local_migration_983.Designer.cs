@@ -3,6 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using MonkeyApp1.Data;
 
@@ -11,9 +12,11 @@ using MonkeyApp1.Data;
 namespace MonkeyApp1.Migrations
 {
     [DbContext(typeof(MonkeyApp1Context))]
-    partial class MonkeyApp1ContextModelSnapshot : ModelSnapshot
+    [Migration("20230502185808_mssql.local_migration_983")]
+    partial class mssqllocal_migration_983
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder

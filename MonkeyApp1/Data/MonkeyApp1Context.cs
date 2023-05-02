@@ -15,5 +15,7 @@ namespace MonkeyApp1.Data
         }
 
         public DbSet<MonkeyApp1.Models.Monkey> Monkey { get; set; } = default!;
+
+        public DbSet<MonkeyApp1.Models.Continent> Continent { get; set; } = default!;
     }
 }

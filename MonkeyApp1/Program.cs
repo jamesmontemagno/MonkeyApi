@@ -1,24 +1,20 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
 using MonkeyApp1.Data;
-using MonkeyApp1;
+using MonkeyApp1.Endpoints;
+
 var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddDbContext<MonkeyApp1Context>(options =>
     options.UseSqlServer(builder.Configuration.GetConnectionString("MonkeyApp1Context") ?? throw new InvalidOperationException("Connection string 'azuredatabase' not found.")));
 
 // Add services to the container.
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
+builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
 var app = builder.Build();
 
-// Configure the HTTP request pipeline.
-//if (app.Environment.IsDevelopment())
-{
-    app.UseSwagger();
-    app.UseSwaggerUI();
-}
 
 if (app.Environment.IsDevelopment())
 {
@@ -49,6 +45,7 @@ app.MapGet("/weatherforecast", () =>
 .WithOpenApi();
 
 app.MapMonkeyEndpoints();
+app.MapControllers();
 
 app.Run();
 
