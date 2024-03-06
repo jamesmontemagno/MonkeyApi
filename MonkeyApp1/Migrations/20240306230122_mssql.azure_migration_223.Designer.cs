@@ -11,8 +11,8 @@ using MonkeyApp1.Data;
 namespace MonkeyApp1.Migrations
 {
     [DbContext(typeof(MonkeyApp1Context))]
-    [Migration("20240306215248_sqlite.local_migration_557")]
-    partial class sqlitelocal_migration_557
+    [Migration("20240306230122_mssql.azure_migration_223")]
+    partial class mssqlazure_migration_223
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)

@@ -1,9 +1,10 @@
 Param(
-    [parameter(Mandatory=$false)][string]$baseUrl = "https://localhost:7179/"
+    [parameter(Mandatory=$false)][string]$baseUrl = "https://motzmonkeys.azurewebsites.net/"
 )
 
 class Monkey 
 {
+    [int] $Id
     [string] $Name
     [string] $Location
     [string] $Details

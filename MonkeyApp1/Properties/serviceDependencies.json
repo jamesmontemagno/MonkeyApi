@@ -1,16 +1,12 @@
 {
   "dependencies": {
-    "mssql2": {
-      "type": "mssql",
-      "connectionId": "ConnectionStrings:azuredatabase"
-    },
     "mssql1": {
       "type": "mssql",
       "connectionId": "ConnectionStrings:MonkeyApp1Context"
     },
-    "sqlite1": {
-      "type": "sqlite",
-      "connectionId": "ConnectionStrings:MonkeySQLiteContext"
+    "mssql2": {
+      "type": "mssql",
+      "connectionId": "ConnectionStrings:azuredatabase"
     }
   }
 }

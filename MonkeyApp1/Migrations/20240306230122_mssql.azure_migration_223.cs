@@ -5,7 +5,7 @@
 namespace MonkeyApp1.Migrations
 {
     /// <inheritdoc />
-    public partial class sqlitelocal_migration_557 : Migration
+    public partial class mssqlazure_migration_223 : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
