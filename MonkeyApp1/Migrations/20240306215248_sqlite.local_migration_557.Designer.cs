@@ -2,6 +2,7 @@
 using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using MonkeyApp1.Data;
 
@@ -10,9 +11,11 @@ using MonkeyApp1.Data;
 namespace MonkeyApp1.Migrations
 {
     [DbContext(typeof(MonkeyApp1Context))]
-    partial class MonkeyApp1ContextModelSnapshot : ModelSnapshot
+    [Migration("20240306215248_sqlite.local_migration_557")]
+    partial class sqlitelocal_migration_557
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder.HasAnnotation("ProductVersion", "8.0.2");

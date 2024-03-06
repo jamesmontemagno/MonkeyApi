@@ -11,6 +11,11 @@
       "resourceId": null,
       "type": "mssql.local",
       "connectionId": "ConnectionStrings:MonkeyApp1Context"
+    },
+    "sqlite1": {
+      "secretStore": "LocalSecretsFile",
+      "type": "sqlite.local",
+      "connectionId": "ConnectionStrings:MonkeySQLiteContext"
     }
   }
 }
