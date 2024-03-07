@@ -1,6 +1,6 @@
-﻿@MonkeyApp1_HostAddress = https://motzmonkeys.azurewebsites.net/
+﻿@MonkeyApp1_HostAddress = https://localhost:7172
 
-Get {{MonkeyApp1_HostAddress}}/api/Monkey/
+Get {{MonkeyApp1_HostAddress}}/Monkey
 
 ###
 
@@ -8,11 +8,11 @@ Get {{MonkeyApp1_HostAddress}}/api/Monkey/2
 
 ###
 
-GET {{MonkeyApp1_HostAddress}}/api/continents
+GET {{MonkeyApp1_HostAddress}}/mobilebff/api/continents
 
 ###
 
-POST {{MonkeyApp1_HostAddress}}/api/continents
+POST {{MonkeyApp1_HostAddress}}/mobilebff/api/continents
 Content-Type: application/json
 
 {
