@@ -1,16 +1,18 @@
 {
   "dependencies": {
-    "mssql2": {
-      "secretStore": "LocalSecretsFile",
-      "resourceId": "/subscriptions/[parameters('subscriptionId')]/resourceGroups/[parameters('resourceGroupName')]/providers/Microsoft.Sql/servers/monkeygroup1dbs/databases/monkeygroup1db",
-      "type": "mssql.azure",
-      "connectionId": "ConnectionStrings:azuredatabase"
-    },
     "mssql1": {
       "secretStore": null,
       "resourceId": null,
       "type": "mssql.local",
       "connectionId": "ConnectionStrings:MonkeyApp1Context"
+    },
+    "mssql2": {
+      "serviceConnectorResourceId": "/subscriptions/[parameters('subscriptionId')]/resourcegroups/[parameters('resourceGroupName')]/providers/Microsoft.ServiceLinker/locations/eastus/connectors/ConnectionStringsazuredatabase_3C5F6B4163",
+      "secretStore": "LocalSecretsFile",
+      "resourceId": "/subscriptions/[parameters('subscriptionId')]/resourcegroups/[parameters('resourceGroupName')]/providers/Microsoft.Sql/servers/motzmonkeysdb/databases/MonkeyApp1_db",
+      "type": "mssql.azure",
+      "connectionId": "ConnectionStrings:azuredatabase",
+      "dynamicId": null
     }
   }
 }
