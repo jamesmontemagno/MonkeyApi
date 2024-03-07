@@ -6,7 +6,8 @@
     },
     "mssql2": {
       "type": "mssql",
-      "connectionId": "ConnectionStrings:azuredatabase"
+      "connectionId": "ConnectionStrings:azuredatabase",
+      "dynamicId": null
     }
   }
 }

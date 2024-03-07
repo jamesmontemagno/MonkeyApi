@@ -16,7 +16,6 @@ POST {{MonkeyApp1_HostAddress}}/api/continents
 Content-Type: application/json
 
 {
-  "Id": 1,
   "name":"North America"
 }
 

@@ -4,7 +4,6 @@ Param(
 
 class Monkey 
 {
-    [int] $Id
     [string] $Name
     [string] $Location
     [string] $Details

@@ -5,12 +5,6 @@ using MonkeyApp1.Endpoints;
 
 var builder = WebApplication.CreateBuilder(args);
 
-
-
-//builder.Services.AddDbContext<MonkeyApp1Context>(options =>
-//    options.UseSqlite(builder.Configuration.GetConnectionString("MonkeySqliteContext") ?? throw new InvalidOperationException("Connection string 'MonkeySqliteContext' not found.")));
-
-
 builder.Services.AddDbContext<MonkeyApp1Context>(options =>
     options.UseSqlServer(builder.Configuration.GetConnectionString("azuredatabase") ?? throw new InvalidOperationException("Connection string 'azuredatabase' not found.")));
 
